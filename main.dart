@@ -1,4 +1,7 @@
+import "dart:io";
+
 void main() {
-  print(5 > 3); //comparison or boolean expression
-  print(5 == 5);
+  print("What is your name?:");
+  String username = stdin.readLineSync();
+  print("Hello ${username}");
 }
