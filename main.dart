@@ -1,15 +1,22 @@
+/* a coding library is a collection of code that lets you do things
+ that you normally wouldn't be able to do */
+import "dart:math";
+
 void main() {
-  String greeting = "Hello";
-  //                 01234
+  int quantity = 300;
+  double price = 5.99;
 
-  String greeting2 = " World";
+  quantity = quantity + 50; // reassignment
+  quantity *= 50;
+  quantity++;
 
-  print(greeting.length); // .length() tells us property of string
-  print(greeting[0]);
-  print(greeting.toLowerCase()); //google dart string functions for more.
-  print(greeting.indexOf("e"));
-  print(greeting.contains("e"));
-
-  print(greeting + greeting2);
-  print("The greeting is: ${greeting + greeting2}");
+  print(5 + 3 * (2 / 7)); // follows PEMDAS
+  print(10 / 3); // returns a double
+  print(10 % 3); // tells us remainder (i.e. 1)
+  print(quantity);
+  print(min(100, 9));
+  print(max(100, 9));
+  print(sqrt(144));
 }
+
+// method is another word for function
