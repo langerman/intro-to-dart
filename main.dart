@@ -1,11 +1,15 @@
 void main() {
-  String firstName = "Daniel";
-  int age = 24;
-  double gpa = 3.5;
-  bool isRegisteredVoter = false;
+  String greeting = "Hello";
+  //                 01234
 
-  print(isRegisteredVoter);
+  String greeting2 = " World";
+
+  print(greeting.length); // .length() tells us property of string
+  print(greeting[0]);
+  print(greeting.toLowerCase()); //google dart string functions for more.
+  print(greeting.indexOf("e"));
+  print(greeting.contains("e"));
+
+  print(greeting + greeting2);
+  print("The greeting is: ${greeting + greeting2}");
 }
-
-/* Strings (plain text), number, and boolean (treu false data types).
-*/
