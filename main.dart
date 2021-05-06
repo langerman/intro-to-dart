@@ -2,16 +2,14 @@ import "dart:math";
 import "dart:io";
 
 void main() {
-  print("Enter a color: ");
-  String color = stdin.readLineSync();
+  List<int> favNums = [4, 8, 15, 16, 23, 42];
+  //                   0, 1, 2,  3,  4,  5
 
-  print("Enter a plural noun: ");
-  String pluralNoun = stdin.readLineSync();
+  favNums[3] = 17;
+  favNums.add(64);
+  favNums.remove(17); //called removing by value
 
-  print("Enter a celebrity: ");
-  String celebrity = stdin.readLineSync();
-
-  print("Roses are ${color}");
-  print("${pluralNoun} are blue");
-  print("I love ${celebrity}");
+  print(favNums[3] + favNums[0]);
+  print(favNums.indexOf(15));
+  print(favNums.contains(15));
 }
