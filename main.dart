@@ -1,14 +1,16 @@
 import "dart:math";
 import "dart:io";
 
-void drawTriangle() {
-  print(" /|");
-  print("/_|");
+double addNumbers(double num1, double num2) {
+  return num1 + num2;
 }
 
 void main() {
-  print("Before func");
-  drawTriangle();
-  print("After func");
+  double answer = addNumbers(5, 10);
+
+  print(answer);
 }
-//do not repeat yourself
+//argument is the value that gets passed in.
+//parameter is the value that we specify
+//void means the function willnot return any value back to us
+//return value is last line of code b/c it breaks you out of the func
