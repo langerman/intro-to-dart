@@ -1,16 +1,16 @@
-import "dart:math";
 import "dart:io";
 
-double addNumbers(double num1, double num2) {
-  return num1 + num2;
+String prompt(String promptText) {
+  print("The promopt is: ${promptText}");
+  String answer = stdin.readLineSync();
+  return answer;
 }
 
 void main() {
-  double answer = addNumbers(5, 10);
-
-  print(answer);
+  String color = prompt("Enter a color: ");
+  String pluralNoun = prompt("Enter a plural noun: ");
+  String celebrity = prompt("Enter a celebrity: ");
+  print(
+      "The color is ${color}, the plural noun is ${pluralNoun}, and the celebrity is ${celebrity}!");
 }
-//argument is the value that gets passed in.
-//parameter is the value that we specify
-//void means the function willnot return any value back to us
-//return value is last line of code b/c it breaks you out of the func
+//return type string
