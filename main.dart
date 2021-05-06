@@ -2,18 +2,16 @@ import "dart:math";
 import "dart:io";
 
 void main() {
-  print("Enter first number:");
-  String num1 = stdin.readLineSync();
-  print("Enter second number:");
-  String num2 = stdin.readLineSync();
+  print("Enter a color: ");
+  String color = stdin.readLineSync();
 
-  print(double.parse(num1) + double.parse(num2));
-  //concatenation if adding two Strings
+  print("Enter a plural noun: ");
+  String pluralNoun = stdin.readLineSync();
 
-  print("Enter first number:");
-  double num3 = double.parse(stdin.readLineSync());
-  print("Enter second number:");
-  double num4 = double.parse(stdin.readLineSync());
+  print("Enter a celebrity: ");
+  String celebrity = stdin.readLineSync();
 
-  print(num1 + num2);
+  print("Roses are ${color}");
+  print("${pluralNoun} are blue");
+  print("I love ${celebrity}");
 }
