@@ -1,48 +1,14 @@
 import "dart:io";
 
-String prompt(String promptText) {
-  print("The promopt is: ${promptText}");
-  String answer = stdin.readLineSync();
-  return answer;
-}
+String prompt(String promptText) {}
 
-double promptDouble() {
-  print("Enter a number: ");
-  double myNum = double.parse(stdin.readLineSync());
-  return myNum;
-}
+double promptDouble() {}
 
 void main() {
-  double num1 = promptDouble();
-  double num2 = promptDouble();
-  String op = prompt("Enter an operation (+,-,/,*): ");
-
-/*  if (op == '+') {
-    print(num1 + num2);
-  } else if (op == '-') {
-    print(num1 - num2);
-  } else if (op == '/') {
-    print(num1 / num2);
-  } else if (op == '*') {
-    print(num1 * num2);
-  } else {
-    print("Invalid Operator");
-  }
-*/
-  switch (op) {
-    case '+':
-      print(num1 + num2);
-      break;
-    case '-':
-      print(num1 - num2);
-      break;
-    case '*':
-      print(num1 * num2);
-      break;
-    case '/':
-      print(num1 / num2);
-      break;
-    default:
-      print("Invalid Operator");
+  int i = 0;
+  while (i < 5) {
+    //loop guard
+    print(i);
+    i++; //watch out for loop overflow!
   }
 }
