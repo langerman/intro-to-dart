@@ -1,14 +1,25 @@
 import "dart:io";
 
-String prompt(String promptText) {}
+String prompt(String promptText) {
+  print(promptText);
+  String answer = stdin.readLineSync();
+  return answer;
+}
 
-double promptDouble() {}
+double promptDouble() {
+  print("Enter a number: ");
+  double myNum = double.parse(stdin.readLineSync());
+  return myNum;
+}
 
 void main() {
-  int i = 0;
-  while (i < 5) {
-    //loop guard
-    print(i);
-    i++; //watch out for loop overflow!
+  String answer = "michael scott";
+  String guess = "";
+  int guessCount = 0;
+
+  while (guess != answer) {
+    guess = prompt("Enter a guess: ");
+    guessCount++;
   }
+  print("You Won in ${guessCount} guesses!");
 }
