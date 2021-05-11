@@ -12,14 +12,31 @@ double promptDouble() {
   return myNum;
 }
 
-void main() {
-  String answer = "michael scott";
-  String guess = "";
-  int guessCount = 0;
-
-  while (guess != answer) {
-    guess = prompt("Enter a guess: ");
-    guessCount++;
+void drawTriangle(int numTraingles) {
+  for (int i = 0; i < numTraingles; i++) {
+    print(" /|");
+    print("/_|");
   }
-  print("You Won in ${guessCount} guesses!");
+}
+
+void main() {
+  List<String> friends = ["Stanley", "Pam", "Karen"];
+  //                       0,         1,     2
+  //print(friends[0]);
+
+  for (int i = 0; i < friends.length; i++) {
+    print(friends[i].toUpperCase());
+  }
+
+  for (String friend in friends) {
+    print(friend);
+  }
+/* Same as this:
+  int i = 0;
+  while (i < friends.length) {
+    print(friends[i].toUpperCase());
+    i++;
+  }
+*/
+  drawTriangle(5);
 }
