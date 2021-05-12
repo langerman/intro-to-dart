@@ -20,23 +20,16 @@ void drawTriangle(int numTraingles) {
 }
 
 void main() {
-  List<String> friends = ["Stanley", "Pam", "Karen"];
-  //                       0,         1,     2
-  //print(friends[0]);
-
-  for (int i = 0; i < friends.length; i++) {
-    print(friends[i].toUpperCase());
-  }
-
-  for (String friend in friends) {
-    print(friend);
-  }
-/* Same as this:
-  int i = 0;
-  while (i < friends.length) {
-    print(friends[i].toUpperCase());
-    i++;
-  }
-*/
   drawTriangle(5);
+
+  //single line comment uses two forward slashes. for humans not computers.
+
+  /*everything here
+    is now a
+    comment.
+
+    This is useful for commenting out code.
+  */
+
+  //as a beginner it can be useful to explain what each line of code is doing
 }
