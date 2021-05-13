@@ -12,24 +12,20 @@ double promptDouble() {
   return myNum;
 }
 
-void drawTriangle(int numTraingles) {
-  for (int i = 0; i < numTraingles; i++) {
-    print(" /|");
-    print("/_|");
-  }
+class Book {
+  //class is the blueprint
+  //complex data type properties/attributes we need
+  String title;
+  String author;
+  int numPages;
 }
 
 void main() {
-  drawTriangle(5);
+  Book hp = Book(); //this is the object
+  //the dot is the dereference operator
+  hp.title = "Sorcerers Stone";
+  hp.author = "JK Rowling";
+  hp.numPages = 300;
 
-  //single line comment uses two forward slashes. for humans not computers.
-
-  /*everything here
-    is now a
-    comment.
-
-    This is useful for commenting out code.
-  */
-
-  //as a beginner it can be useful to explain what each line of code is doing
+  print(hp.title);
 }
