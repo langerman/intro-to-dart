@@ -6,32 +6,45 @@ String prompt(String promptText) {
   return answer;
 }
 
-double promptDouble() {
-  print("Enter a number: ");
+double promptDouble(String promptText) {
+  print(promptText);
   double myNum = double.parse(stdin.readLineSync());
   return myNum;
 }
 
-//a method is a function that is inside of a class
+class MathQuestion {
+  String question;
+  double answer;
 
-class Student {
-  String name;
-  double gpa;
-
-  Student(String aName, double aGpa) {
-    this.name = aName;
-    this.gpa = aGpa;
-  }
-
-  bool hasHonors() {
-    return this.gpa >= 3.5;
+  MathQuestion(String aQuestion, double aAnswer) {
+    this.question = aQuestion;
+    this.answer = aAnswer;
   }
 }
 
 void main() {
-  Student jim = Student("Jim", 2.5);
-  Student pam = Student("Pam", 3.7);
+  //the data
+  List<MathQuestion> questions = [
+    MathQuestion("3 + 5", 8.0),
+    MathQuestion("10 - 7", 3.0),
+    MathQuestion("100 * 9", 900.0)
+  ];
 
-  print(jim.hasHonors());
-  print(pam.hasHonors());
+/*alternative to list
+  MathQuestion question1 = MathQuestion("3 + 5", 8.0);
+  MathQuestion question2 = MathQuestion("10 - 7", 3.0);
+  MathQuestion question3 = MathQuestion("100 * 9", 900.0);
+*/
+
+  int score = 0;
+
+  for (MathQuestion mathQuestion in questions) {
+    double userAnswer = promptDouble(mathQuestion.question);
+    if (userAnswer == mathQuestion.answer) {
+      score++;
+    }
+
+    print(
+        "You got ${score}/${questions.length} (${score / questions.length * 100}%) correct.");
+  }
 }
